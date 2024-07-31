@@ -1,3 +1,5 @@
+// Type sirve para dar tipos por separado a las variables que lo lleguen a necesitar
+
 type Cursos = {
 	nombre: string;
 	tiempo: number;
@@ -12,8 +14,6 @@ let typescript: Cursos = {
 };
 
 console.log(typescript);
-
-// sirve para dar tipos por separado a las variables que lo lleguen a necesitar
 
 type NombreCarro = string;
 type ModeloCarro = string;
