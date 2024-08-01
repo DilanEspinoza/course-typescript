@@ -14,23 +14,24 @@ let typescript: Cursos = {
 };
 
 console.log(typescript);
-
+// Ponemos ano carro porque al parecer la ñ no la toma como una letra
 type NombreCarro = string;
 type ModeloCarro = string;
-type AnoCarro = number;
+// Ehh al principio no podia pero ahora si puedo poner la ñ, si no sonaba muy extraño
+type AñoCarro = number;
 
 type Carro = {
 	nombre: NombreCarro;
 	modelo: ModeloCarro;
-	ano: AnoCarro;
+	ano: AñoCarro;
 };
 
 const nombreCarro: NombreCarro = "Adui";
 const modeloCarro: ModeloCarro = "A8";
-const anoCarro: AnoCarro = 2019;
+const añoCarro: AñoCarro = 2019;
 
 const carro: Carro = {
 	nombre: nombreCarro,
 	modelo: modeloCarro,
-	ano: anoCarro,
+	ano: añoCarro,
 };
