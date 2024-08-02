@@ -41,3 +41,33 @@ function validarFormulario(input1: string | number, input2: string | number) {
 }
 
 /* Intersion Types */
+
+// Una intersepcion de tipo crea un nuevo tipo para combinar varios tipos ya existentes
+// Teniendo el nuevo tipo tiene todas las características de los tipos existentes.
+
+type typeA = string;
+type typeB = number;
+
+type typeAB = typeA & typeB;
+
+/* keyof Operador */
+
+// Cuando se usa en un object type con keys explícitas, keyof crea un tipo de unión con esas claves.
+
+interface User {
+	nombre: string;
+	apellido: string;
+	edad: number;
+}
+
+let user: User = {
+	nombre: "Pepelian",
+	apellido: "Espartano",
+	edad: 18,
+};
+
+function userProperty(user: User, property: keyof User) {
+	console.log(`Printing user property ${property}: "${user[property]}"`);
+}
+
+userProperty(user, "nombre"); // output
