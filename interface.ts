@@ -97,3 +97,36 @@ const sinHobbii = {
 	ano: 19,
 	color: "cafe oscuro",
 };
+
+/* Interfaces para funciones */
+
+interface Operacion {
+	(a: number, b: number): number;
+}
+
+const sumar: Operacion = (a: number, b: number) => a + b;
+const multiplicar: Operacion = (a: number, b: number) => a * b;
+
+console.log(sumar(5, 3)); // 8
+console.log(multiplicar(5, 3)); // 15
+
+/* Interfaces para clases */
+
+interface Animal {
+	nombre: string;
+	haceSonido(): void;
+}
+
+class Oveja implements Animal {
+	nombre: string;
+
+	constructor(nombre: string) {
+		this.nombre = nombre;
+	}
+	haceSonido(): void {
+		console.log("Huau huau!");
+	}
+}
+
+const rodolfo = new Oveja("Rodolfo");
+rodolfo.haceSonido();
